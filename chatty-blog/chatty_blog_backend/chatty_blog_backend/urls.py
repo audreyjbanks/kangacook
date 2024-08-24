@@ -1,10 +1,7 @@
+from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import BlogViewSet
-
-router = DefaultRouter()
-router.register(r'blogs', BlogViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('', include('blog.urls')),  # This should point to your app's urls.py
 ]
