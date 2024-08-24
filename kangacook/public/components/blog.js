@@ -1,4 +1,3 @@
-// src/components/Blog.js
 import React, { useState } from 'react';
 
 function Blog() {
