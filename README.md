@@ -1,2 +1,0 @@
-# kangacook
-Simple Website
