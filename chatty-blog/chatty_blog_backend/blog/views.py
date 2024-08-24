@@ -1,7 +1,10 @@
-from rest_framework import viewsets
+from django.views.generic import ListView, DetailView
 from .models import Blog
-from .serializers import BlogSerializer
 
-class BlogViewSet(viewsets.ModelViewSet):
-    queryset = Blog.objects.all()
-    serializer_class = BlogSerializer
+class BlogListView(ListView):
+    model = Blog
+    template_name = 'blog_list.html'
+
+class BlogDetailView(DetailView):
+    model = Blog
+    template_name = 'blog_detail.html'
